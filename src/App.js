@@ -1,7 +1,12 @@
 import "./App.css";
+import CraeteTodo from "./components/addTodo/CraeteTodo";
 
 function App() {
-  return <div>TODOS APP</div>;
+  return (
+    <div>
+      <CraeteTodo />
+    </div>
+  );
 }
 
 export default App;
