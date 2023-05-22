@@ -1,11 +1,12 @@
 h1 {
+  margin: 50px;
   text-align: center;
 }
 form {
-  margin-inline: auto;
+  margin: 0 auto;
   width: 600px;
   background-color: #fff;
-  padding: 20px;
+  padding: 30px;
 }
 input[type="text"] {
   width: 100%;
