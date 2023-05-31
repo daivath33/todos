@@ -1,10 +1,10 @@
-import React from "react";
+import "./Todo.css";
 
-const Todo = ({ title, description, className }) => {
+const Todo = ({ title, onClick }) => {
   return (
-    <div className={className}>
+    <div className="todo">
       <h3>{title}</h3>
-      <p>{description}</p>
+      <button onClick={onClick}>x</button>
     </div>
   );
 };

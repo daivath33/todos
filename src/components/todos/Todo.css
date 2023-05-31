@@ -1,0 +1,18 @@
+.todo {
+  padding: 10px;
+  border-top: 2px solid lightgray;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.todo button {
+  width: 20px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  background-color: lightgray;
+  border-radius: 100%;
+  color: #fff;
+}
