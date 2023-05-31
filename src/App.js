@@ -1,5 +1,5 @@
 import "./App.css";
-import CraeteTodo from "./components/addTodo/CraeteTodo";
+import CraeteTodo from "./components/todoGenerator/CraeteTodo";
 
 function App() {
   return (
