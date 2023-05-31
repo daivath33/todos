@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Todo from "../todos/Todo";
+import Todo from "../todo/Todo";
 import "./createTodo.css";
 
 const CraeteTodo = () => {
