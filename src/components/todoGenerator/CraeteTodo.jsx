@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import Todo from "../todo/Todo";
 import "./createTodo.css";
 
@@ -6,10 +6,8 @@ const CraeteTodo = () => {
   const [title, setTitle] = useState("");
   const [todos, setTodos] = useState([]);
 
-  let randomId;
-
   const submitFormHandler = () => {
-    randomId = Math.random().toFixed(5);
+    const randomId = Math.random().toFixed(5);
     setTitle(title);
     setTodos((prevTodos) => [...prevTodos, { id: randomId, title: title }]);
     setTitle("");
