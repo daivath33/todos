@@ -1,12 +1,15 @@
 import { useState } from "react";
 import Todo from "../todo/Todo";
 import "./createTodo.css";
+import Input from "../UI/Input/Input";
+import Button from "../UI/Button/Button";
 
 const CraeteTodo = () => {
   const [title, setTitle] = useState("");
   const [todos, setTodos] = useState([]);
 
-  const submitFormHandler = () => {
+  const submitFormHandler = (e) => {
+    e.preventDefault();
     const randomId = Math.random().toFixed(5);
     setTitle(title);
     setTodos((prevTodos) => [...prevTodos, { id: randomId, title: title }]);
@@ -31,23 +34,20 @@ const CraeteTodo = () => {
           />
         ))}
 
-        <form
-          className="inputs"
-          onSubmit={(e) => {
-            e.preventDefault();
-            submitFormHandler();
-          }}
-        >
+        <form className="inputs" onSubmit={submitFormHandler}>
           <div className="input-group">
-            <input
-              type="text"
-              placeholder="Enter item"
-              value={title}
-              onChange={(e) => {
-                setTitle(e.target.value);
+            <Input
+              className="title-input"
+              input={{
+                type: "text",
+                placeholder: "Enter item",
+                value: title,
+                onChange: (e) => {
+                  setTitle(e.target.value);
+                },
               }}
             />
-            <button className="btn">Submit</button>
+            <Button>Submit</Button>
           </div>
         </form>
       </div>
